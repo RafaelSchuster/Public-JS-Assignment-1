@@ -1,25 +1,24 @@
-let initial = ''
-let total = [0,1]
-let fib = ''
+let initial;
 
-console.log(total)
 const number = document.querySelector('.boxform')
 const result = document.querySelector('.result')
 const buton = document.querySelector('.buton')
 
-function fibonacci(){
-    for(let i =2; i < 51; i++){
-        total[i] = total[i-1] + total[i-2]
-    }
-}
-fibonacci()
 
-function calculate(initial){
-    initial = number.value
-    fib = total[initial]
-    result.innerText = fib
+const getData = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:5050/fibonacci/${initial}`);
+    xhr.onload = () => {
+        const data = JSON.parse(xhr.response)
+        console.log(data)
+        console.log(data.result)
+        result.innerText = data.result
+    }
+    xhr.send();
 }
-buton.addEventListener('click',()=>{
-    console.log(number.value)
-    calculate()})
-    
+buton.addEventListener('click', () => {
+    initial = number.value - 1
+    getData()
+    return initial
+
+})
