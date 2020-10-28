@@ -121,3 +121,15 @@ align-items: flex-end;
 
 color: #D9534F;
 }
+.previous{
+    position: absolute;
+    display: inline;
+    width: 1088px ;
+    height: 500px;
+}
+.recipient{
+    position: absolute;
+    display: inline;
+    width: 1088px ;
+    height: 500px;
+}

@@ -9,16 +9,6 @@ const spin = document.querySelector('.spin');
 const alert = document.querySelector('.morethan');
 const error = document.querySelector('.error');
 
-const record = () => {
-    const xhr2 = new XMLHttpRequest();
-    xhr2.open('GET', `http://localhost:5050/getFibonacciResults`);
-    xhr2.onload = () => {
-        records = xhr2.response;
-        console.log(records);
-    };
-    xhr2.send();
-};
-
 const getData = () => {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', `http://localhost:5050/fibonacci/${initial}`);
@@ -63,3 +53,18 @@ buton.addEventListener('click', () => {
         alert.className = "alert alert-danger morethan";
     };
 });
+
+window.addEventListener('load', function recording(){
+    const xhr2 = new XMLHttpRequest();
+    xhr2.open('GET', `http://localhost:5050/getFibonacciResults`);
+    xhr2.onload = () => {
+        spin.className = 'spinner-border spin';
+        let data2 = JSON.parse(xhr2.response)
+            setTimeout(() => {
+                spin.className = 'spin';
+                result.innerText = `The Fibonacci of ${data2.results[1].number} is ${data2.results[1].result} at `;
+            }, 100);
+        console.log(data2);
+    };
+    xhr2.send();
+})
