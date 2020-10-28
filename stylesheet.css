@@ -79,3 +79,45 @@ height: 24px;
 left: 525px;
 top: 236px;
 }
+.spin{
+    position: absolute;
+    display: inline;
+width: 38px;
+height: 38px;
+left: 525px;
+top: 228px;
+
+}
+.morethan{
+    position: absolute;
+    display: inline;
+    left: 275px;
+    top: 278px ;
+    width: 180px;
+    height: 33px;
+    padding:0;
+    text-align: center;
+    line-height: 28px;
+    
+
+}
+.errormsg{
+    position: absolute;
+    text-decoration: none;
+width: 277px;
+height: 24px;
+left: 525px;
+top: 236px;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: flex-end;
+
+color: #D9534F;
+}
