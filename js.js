@@ -78,7 +78,6 @@ window.addEventListener('load', function recording() {
                 datenum[j].innerText = `\xa0${datearray[j]}`
             }
             for (let i = 0; i < 3; i++) {
-                // console.log(date)
                 initnum[i].innerText = `\xa0${data2.results[i].number}\xa0`;
                 resnum[i].innerText = `\xa0${data2.results[i].result}.\xa0`;
             }
