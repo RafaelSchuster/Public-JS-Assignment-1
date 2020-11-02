@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,15 +16,47 @@
 
 <body class="body">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col">
                 <h1 class="display-5 title">Fibonacci Calculator</h1>
                 <span class="line">The Fibonacci Of <input class="form-control boxform" type="number"
                         placeholder="#"></span><button type="button" class="btn btn-primary buton">Is</button> <span
-                    class="result"></span></span>
+                    class="result"></span> <span class="spin" role="status">
+                    <span class="sr-only">Loading...</span>
+                </span><span class="morethan" role="alert"></span>
+                </span>
+            </div>
+            <!-- <div class="row"> -->
+            <div class="col recipient">
+                <h1 class="display-5 titleresults"><span>Results</span> <span class="spin2" role="status">
+                    <span class="sr-only">Loading...</span></h1>
+                <div class="col previous txt"> The Fibonacci Of <span class="initialnum1 boldvalue"> </span><span
+                        class="txt"> is
+                    </span>
+                    <span class="resultnum1 boldvalue"> </span><span class="txt">Calculated at: <span
+                            class="date1"></span></span>
+                </div>
+            </div>
+            <div class="col recipient2">
+                <div class="col previous txt"> The Fibonacci Of <span class="initialnum2 boldvalue"> </span><span
+                        class="txt"> is
+                    </span>
+                    <span class="resultnum2 boldvalue"> </span><span class="txt">Calculated at: <span
+                            class="date2"></span></span>
+                </div>
+            </div>
+            <div class="col recipient3">
+                <div class="col previous txt"> The Fibonacci Of <span class="initialnum3 boldvalue"> </span><span
+                        class="txt"> is
+                    </span>
+                    <span class="resultnum3 boldvalue"> </span><span class="txt">Calculated at: <span
+                            class="date3"></span></span>
+                </div>
             </div>
 
         </div>
+        <!-- </div> -->
+
 
     </div>
 
