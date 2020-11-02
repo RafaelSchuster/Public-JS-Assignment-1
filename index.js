@@ -13,36 +13,34 @@ const alert = document.querySelector('.morethan');
 const error = document.querySelector('.error');
 const previous = document.querySelector('.previous')
 const titleresults = document.querySelector('.titleresults')
-// const initialnum = document.querySelector('.initialnum1')
-// const resultnum = document.querySelector('.resultnum')
-// const datefib = document.querySelector('.date')
 
 const getData = () => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:5050/fibonacci/${initial}`);
-    xhr.onload = () => {
+    const serverCall = new XMLHttpRequest();
+    serverCall.open('GET', `http://localhost:5050/fibonacci/${initial}`);
+    serverCall.onload = () => {
         data = [];
         result.innerText = [];
         spin.className = 'spinner-border spin';
         if (initial == 42) {
-            data = xhr.response;
+            data = serverCall.response;
             setTimeout(() => {
                 spin.className = 'spin';
                 result.innerText = `Server error: ${data}`;
                 result.className = 'result errormsg';
             }, 100);
         } else {
-            data = JSON.parse(xhr.response)
+            data = JSON.parse(serverCall.response)
             setTimeout(() => {
                 spin.className = 'spin';
                 result.innerText = data.result;
             }, 100);
         };
     };
-    xhr.send();
-
+    serverCall.send();
 }
-buton.addEventListener('click', () => {
+
+function clickAction(){
+    updateValues()
     initial = 0;
     if (number.value <= 50 && number.value > 0) {
         alert.className = "morethan";
@@ -60,30 +58,49 @@ buton.addEventListener('click', () => {
         alert.innerText = "Can't be larger than 50";
         alert.className = "alert alert-danger morethan";
     };
-});
+
+}
+
+buton.addEventListener('click', clickAction) 
 
 let datearray = []
+let descending = []
+let data2
 
-window.addEventListener('load', function recording() {
-    const xhr2 = new XMLHttpRequest();
-    xhr2.open('GET', `http://localhost:5050/getFibonacciResults`);
-    xhr2.onload = () => {
-        spin.className = 'spinner-border spin2';
-        let data2 = JSON.parse(xhr2.response)
-        setTimeout(() => {
-            spin.className = 'spin';
-            for (let j = 0; j < 3; j++) {
-                datearray[j] = new Date(Number(`/Date(${data2.results[j].createdDate})/`.replace(/\D/g, '')))
-                console.log(datearray)
-                datenum[j].innerText = `\xa0${datearray[j]}`
-            }
-            for (let i = 0; i < 3; i++) {
-                initnum[i].innerText = `\xa0${data2.results[i].number}\xa0`;
-                resnum[i].innerText = `\xa0${data2.results[i].result}.\xa0`;
-            }
-        }, 100);
+function recording() {
+        const prevHistory = new XMLHttpRequest();
+        prevHistory.open('GET', `http://localhost:5050/getFibonacciResults`);
+        prevHistory.onload = () => {
+            spin.className = 'spinner-border spin2';
+            data2 = JSON.parse(prevHistory.response)
+            dateSort()
+            setTimeout(() => {
+                updateValues()
+            },1000)
+        }
+        prevHistory.send();
+    }
 
-        console.log(data2);
-    };
-    xhr2.send();
-})
+window.addEventListener('load', recording) 
+buton.addEventListener('click',recording)
+
+function dateSort() {
+    data2.results.sort(function (a, b) {
+        let dateB = new Date(b.createdDate),
+            dateA = new Date(a.createdDate);
+        return dateB - dateA
+    })
+}
+
+function updateValues() {
+    spin.className = 'spin';
+    console.log('yes')
+    for (let j = 0; j < 3; j++) {
+        datearray[j] = new Date(Number(`/Date(${data2.results[j].createdDate})/`.replace(/\D/g, '')))
+        datenum[j].innerText = `\xa0${datearray[j]}`
+    }
+    for (let i = 0; i < 3; i++) {
+        initnum[i].innerText = `\xa0${data2.results[i].number}\xa0`;
+        resnum[i].innerText = `\xa0${data2.results[i].result}.\xa0`;
+    }
+}
