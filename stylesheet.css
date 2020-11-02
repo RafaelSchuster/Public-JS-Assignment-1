@@ -1,215 +1,208 @@
-.body{
+.body {
     position: relative;
     width: 1440px;
     height: 1024px;
-    margin: auto ;
+    margin: auto;
     border: 1px solid black;
 }
-.container{
+
+.container {
     position: absolute;
 }
-.title{
+
+.title {
     position: absolute;
-width: 672px;
-height: 79px;
-left: 154px;
-top: 100px;
-
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 72px;
-line-height: 79px;
-/* identical to box height, or 110% */
-
-display: flex;
-align-items: flex-end;
-
-color: #373A3C;
+    width: 672px;
+    height: 79px;
+    left: 154px;
+    top: 100px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 79px;
+    display: flex;
+    align-items: flex-end;
+    color: #373A3C;
 }
-.line{
+
+.line {
     position: absolute;
-width: 189px;
-height: 24px;
-left: 169px;
-top: 236px;
+    width: 189px;
+    height: 24px;
+    left: 169px;
+    top: 236px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    color: #373A3C;
 
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 24px;
-/* identical to box height, or 100% */
-
-display: flex;
-align-items: flex-end;
-
-color: #373A3C;
 }
-.boxform{
+
+.boxform {
     position: absolute;
-width: 86px;
-height: 38px;
-left: 200px;
-bottom: -8px;
-
-
-
-background: #FFFFFF;
-border: 1px solid #CCCCCC;
-box-sizing: border-box;
-border-radius: 4px;
+    width: 86px;
+    height: 38px;
+    left: 200px;
+    bottom: -8px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
-.buton{
+
+.buton {
     position: absolute;
     width: 39px;
     height: 38px;
     left: 472px;
     top: 229px;
-    
-
-background: #0275D8;
-border: 1px solid #0275D8;
-box-sizing: border-box;
-border-radius: 4px;
+    background: #0275D8;
+    border: 1px solid #0275D8;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
-.result{
+
+.result {
     position: absolute;
     font-weight: 700;
     text-decoration: underline;
-width: 28px;
-height: 24px;
-left: 525px;
-top: 236px;
+    width: 28px;
+    height: 24px;
+    left: 525px;
+    top: 236px;
 }
-.spin{
+
+.spin {
     position: absolute;
     display: inline;
-width: 38px;
-height: 38px;
-left: 525px;
-top: 228px;
+    width: 38px;
+    height: 38px;
+    left: 525px;
+    top: 228px;
 
 }
-.morethan{
+
+.morethan {
     position: absolute;
     display: inline;
     left: 275px;
-    top: 278px ;
+    top: 278px;
     width: 180px;
     height: 33px;
-    padding:0;
+    padding: 0;
     text-align: center;
     line-height: 28px;
-    
-
 }
-.errormsg{
+
+.errormsg {
     position: absolute;
     text-decoration: none;
-width: 277px;
-height: 24px;
-left: 525px;
-top: 236px;
-
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-
-display: flex;
-align-items: flex-end;
-
-color: #D9534F;
+    width: 277px;
+    height: 24px;
+    left: 525px;
+    top: 236px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    color: #D9534F;
 }
-.previous{
+
+.previous {
     position: absolute;
     width: 1088px;
     height: 24px;
     left: 164px;
     top: 120px;
     padding-left: 0px;
-    padding-bottom: 18px ;
-    border-bottom: 1px solid black ;
+    padding-bottom: 18px;
+    border-bottom: 1px solid black;
     padding-top: 24px;
-    
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
-    /* identical to box height, or 100% */
-    
     display: flex;
     align-items: flex-end;
-    
     color: #373A3C;
 
 }
-.recipient{
+
+.recipient {
     position: absolute;
     display: inline;
-    width: 1088px ;
+    width: 1088px;
     height: 300px;
-    top: 347px ;
+    top: 347px;
 }
-.recipient2{
+
+.recipient2 {
     position: absolute;
     display: inline;
-    width: 1088px ;
+    width: 1088px;
     top: 420px;
 }
-.recipient3{
+
+.recipient3 {
     position: absolute;
     display: inline;
-    width: 1088px ;
+    width: 1088px;
     top: 500px;
 }
-.titleresults{
-    position: absolute;
-width: 182px;
-height: 72px;
-left: 164px;
-top: 0px;
-    font-family: Open Sans;
-font-size: 54px;
-font-style: normal;
-font-weight: 400;
-line-height: 72px;
-letter-spacing: 0px;
-text-align: left;
 
-}
-.txt{
-    font-family: Open Sans;
-font-size: 23px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0px;
-text-align: left;
-}
-.boldvalue{
-    font-family: Open Sans;
-font-size: 24px;
-font-weight: 700;
-line-height: 24px;
-letter-spacing: 0px;
-text-align: l
-}
-.date{
+.titleresults {
     position: absolute;
-
+    width: 182px;
+    height: 72px;
+    left: 164px;
+    top: 0px;
+    font-family: Open Sans;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0px;
+    text-align: left;
 }
-.spin2{
+
+.txt {
+    font-family: Open Sans;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.boldvalue {
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: l
+}
+
+.date {
+    position: absolute;
+}
+
+.spin2 {
     position: absolute;
     height: 72px;
-left: 360px;
-display: inline;
-width: 35px;
-height: 35px;
-top: 371px;
-
+    left: 360px;
+    display: inline;
+    width: 35px;
+    height: 35px;
+    top: 371px;
 }
