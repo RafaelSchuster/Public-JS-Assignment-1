@@ -90,7 +90,7 @@
 .morethan {
     position: absolute;
     display: inline;
-    left: 275px;
+    left: 315px;
     top: 278px;
     width: 180px;
     height: 33px;
@@ -134,7 +134,6 @@
     display: flex;
     align-items: flex-end;
     color: #373A3C;
-
 }
 
 .recipient {
@@ -205,4 +204,32 @@
     width: 35px;
     height: 35px;
     top: 371px;
+}
+
+.check {
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    height: 14px;
+    left: 169px;
+    top: 281px;
+}
+
+.checktxt {
+    position: absolute;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.checkbox {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
 }
