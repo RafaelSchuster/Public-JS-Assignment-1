@@ -76,7 +76,6 @@ function recording() {
     prevHistory.onload = () => {
         spin.className = 'spinner-border spin2';
         data2 = JSON.parse(prevHistory.response);
-        console.log(data2)
         dateSort();
         setTimeout(() => {
             updateValues();
