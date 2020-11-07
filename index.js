@@ -15,6 +15,7 @@ const error = document.querySelector('.error');
 const previous = document.querySelector('.previous');
 const titleresults = document.querySelector('.titleresults');
 const checkbox = document.querySelector('.checkbox');
+const selection =  document.querySelector('.sel');
 
 const getData = () => {
     const serverCall = new XMLHttpRequest();
@@ -75,6 +76,7 @@ function recording() {
     prevHistory.onload = () => {
         spin.className = 'spinner-border spin2';
         data2 = JSON.parse(prevHistory.response);
+        console.log(data2)
         dateSort();
         setTimeout(() => {
             updateValues();
@@ -117,6 +119,48 @@ function ifCheckedGetData() {
 
 window.addEventListener('load', recording);
 buton.addEventListener('click', ifChecked);
+selection.addEventListener('change', (event)=>{
+    if(event.target.value == 1){
+        nAsc();
+        setTimeout(() => {
+            updateValues();
+        }, 1000);
+    };
+    if(event.target.value == 2){
+        nDesc();
+        setTimeout(() => {
+            updateValues();
+        }, 1000);
+    };
+    if(event.target.value == 3){
+        dateSortAsc();
+        setTimeout(() => {
+            updateValues();
+        }, 1000);
+    };
+    if(event.target.value == 4){
+        dateSort()
+        setTimeout(() => {
+            updateValues();
+        }, 1000);
+    };
+    });
+    
+function nAsc(){
+    data2.results.sort(function (a, b) {
+        let numB = b.number;
+            numA = a.number;
+        return numA - numB;
+    });
+}
+
+function nDesc(){
+    data2.results.sort(function (a, b) {
+        let numB = b.number;
+            numA = a.number;
+        return numB - numA;
+    });
+}
 
 
 function dateSort() {
@@ -124,6 +168,14 @@ function dateSort() {
         let dateB = new Date(b.createdDate),
             dateA = new Date(a.createdDate);
         return dateB - dateA;
+    });
+}
+
+function dateSortAsc(){
+    data2.results.sort(function (a, b) {
+        let dateB = new Date(b.createdDate),
+            dateA = new Date(a.createdDate);
+        return dateA - dateB;
     });
 }
 

@@ -121,7 +121,7 @@
     width: 1088px;
     height: 24px;
     left: 164px;
-    top: 120px;
+    top: 160px;
     padding-left: 0px;
     padding-bottom: 18px;
     border-bottom: 1px solid black;
@@ -232,4 +232,16 @@
     box-sizing: border-box;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
+}
+
+.sel{
+    position: absolute;
+    max-width: 140px;
+    height: 38px;
+    left: 160px;
+    top: 87px;
+    background: #E6E6E6;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
