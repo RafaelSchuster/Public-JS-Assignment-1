@@ -5,7 +5,6 @@ let total = [0, 1];
 let initnum = [document.querySelector('.initialnum1'), document.querySelector('.initialnum2'), document.querySelector('.initialnum3')];
 let resnum = [document.querySelector('.resultnum1'), document.querySelector('.resultnum2'), document.querySelector('.resultnum3')];
 let datenum = [document.querySelector('.date1'), document.querySelector('.date2'), document.querySelector('.date3')];
-
 const number = document.querySelector('.boxform');
 const result = document.querySelector('.result');
 const buton = document.querySelector('.buton');
